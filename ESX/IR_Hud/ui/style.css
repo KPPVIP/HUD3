@@ -1,0 +1,354 @@
+/* Fonts */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+/* Body */
+
+#mainContainer {
+	display: none;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif!important;
+    font-max-size: x-large;
+    background: transparent!important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  user-select: none;
+}
+
+:root {
+  --green: rgb(0, 255, 0);
+  --blue: #1361ff;
+  --red: rgb(250, 60, 60);
+}
+
+
+
+
+/* Ping */
+@keyframes ping {
+  75%,
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.status-on {
+  background: var(--green);
+}
+
+.status-off {
+  background: var(--red);
+}
+
+.status-on span {
+  background: var(--green);
+}
+
+.status-off span {
+  background: var(--red);
+}
+.symbol-status {
+  bottom: 0;
+  left: 0;
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 1000px;
+  margin-left: 0.3em;
+}
+
+/* End Ping */
+
+.symbol-status span {
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 1000px;
+  opacity: 0.8;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  overflow: visible;
+}
+
+.square {
+  border-radius: 5px;
+  background: #1361ff;
+  padding: 15px;
+  width: 10px;
+  height: 5px;
+  text-align: center;
+  font-weight: 800;
+  color: black;
+}
+
+.down-icon {
+  position: absolute;
+  bottom: 4vh;
+  right: 4em;
+}
+
+.up-icon {
+    position: absolute;
+    top: 4vh;
+    right: 4em;
+  }
+  
+
+.span-number {
+  font-size: 3em;
+}
+
+.span-km {
+  color: var(--blue);
+  font-size: 1.3em;
+}
+
+.span-gas {
+  width: 1.4em;
+  height: 1.4em;
+}
+
+.span-number-gas {
+  font-size: 1.1em;
+}
+
+.seccond-section div img {
+  width: 1.6em;
+  height: 1.6em;
+  margin-right: 3px;
+}
+
+.up-icon section img{
+    width: 1.3em;
+    height: 1.3em;
+}
+
+.img {
+  margin-left: 0.5em;
+  width: 1.4em;
+  height: 1.4em;
+    filter: drop-shadow(0px 0px 6px #44d);
+}
+
+.damageIcon {
+  margin-left: 0.5em;
+  width: 1.9em;
+  height: 1.9em;
+	
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
+.span-km{
+    font: full-width;
+}
+.text-right {
+  text-align: left;
+  direction: ltr
+}
+
+.ihelp {
+    opacity: 1.0;
+    position: absolute;
+    text-align: left;
+	margin-left: 10px;
+    left: 0px;
+    bottom: 35%;
+    font-size: 12px;
+    display: inline-block;
+	font-style: normal;
+
+    /*top: 50%;
+    transform: translateY(-50%);*/
+}
+
+.hidden { 
+    display: none !important;
+}
+
+.bh{
+	display: flex;
+	align-items:center;
+	color:white;
+	font-size:13px;
+}
+
+
+.buttonh{
+	background-color: #1361ff;
+	border-radius: 5px;
+	color: black;
+	height: 25px;
+	width: 25px;
+	text-align: center;
+	padding: 3px;
+	margin-right: 5px;
+	margin-bottom: 3px;
+}
+
+.progress {
+    position: absolute;
+    z-index: -1;
+    height: 1.81vw;
+    width: 12vw;
+    border-radius: 0.5vw;
+    background-color: transparent;	
+	transform: rotate(180deg);
+}
+
+#progress-hunger {
+    margin-top: 0.5vw;
+    margin-right: 1.4vw;
+    border: 0.1vw solid rgba(248,248,248, 0.6);
+    right: -1.5vw;
+    box-shadow: 1px 1px 20px 4px rgba(254,203,33,0.56);
+}
+#progress-thirst {
+    margin-top: 2.9vw;
+    margin-right: 1.4vw;
+    border: 0.1vw solid rgba(248,248,248, 0.6);
+    right: -1.5vw;
+    box-shadow: 1px 1px 20px 4px rgba(0,168,219,0.56);
+}
+
+
+.circle {
+    height: 1.2vw;
+    width: 1.2vw;
+	top: 0.8vw;
+	right: 0.3vw;
+    background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+}
+
+#circle-hunger {
+    background-image: url("icon/hunger.png");
+    float: right;
+}
+
+#circle-thirst {
+    background-image: url("icon/thirst.png");
+	top: 3.2vw;
+    float: right;
+}
+
+.field {
+    margin: 0;
+    padding: 0;
+    height: 100% !important;
+    width: 100%;
+    border-radius: 0.5vw;
+    transition: width 1.0s;
+}
+
+#hunger {
+    float: right;
+    vertical-align: center;
+	opacity: 70%;
+    background-color: #FECB21;
+    box-shadow: 1px 1px 34px 14px rgba(254,203,33,0.56);
+    -webkit-box-shadow: 1px 1px 34px 14px rgba(254,203,33,0.56);
+    -moz-box-shadow: 1px 1px 34px 14px rgba(254,203,33,0.56);
+}
+#thirst {
+    float: right;
+    vertical-align: center;
+	opacity: 70%;
+    background-color: #00A8DB;
+}
+
+
+.wavehunger,
+.wavehunger::before,
+.wavehunger::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250vw;
+    height: 250vw;
+    margin-left: -125vw;
+    transform-origin: 50% 50%;
+    background-color: transparent;
+    border-radius: 38% 42%;
+    box-shadow: inset 0 0 10vw rgba(255,191,133,0.63);
+    animation: spin 30s infinite linear;
+    mix-blend-mode: multiply;
+    float: right;
+    vertical-align: center;
+    opacity: 70%;
+}
+
+.wavehunger::before {
+    width: 105%;
+    height: 95%;
+    margin-top: -125vw;
+    transform-origin: 49% 51%;
+    border-radius: 40% 38%;
+    box-shadow: inset 0 0 10vw rgba(255,255,0,0.8);
+    animation: spin 30s infinite linear;
+}
+
+.wavehunger::after {
+    width: 102%;
+    height: 98%;
+    margin-top: -125vw;
+    transform-origin: 51% 49%;
+    border-radius: 48% 42%;
+    box-shadow: inset 0 0 10vw rgba(255,194,87,0.64);
+    animation: spin 30s infinite linear;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+.wavethirst,
+.wavethirst::before,
+.wavethirst::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250vw;
+    height: 250vw;
+    margin-left: -125vw;
+    transform-origin: 50% 50%;
+    background-color: transparent;
+    border-radius: 38% 42%;
+    box-shadow: inset 0 0 10vw rgba(100,255,255,0.59);
+    animation: spin 30s infinite linear;
+    mix-blend-mode: multiply;
+}
+
+.wavethirst::before {
+    width: 105%;
+    height: 95%;
+    margin-top: -125vw;
+    transform-origin: 49% 51%;
+    border-radius: 40% 38%;
+    box-shadow: inset 0 0 10vw rgba(0,89,170,0.59);
+    animation: spin 30s infinite linear;
+}
+
+.wavethirst::after {
+    width: 102%;
+    height: 98%;
+    margin-top: -125vw;
+    transform-origin: 51% 49%;
+    border-radius: 48% 42%;
+    box-shadow: inset 0 0 10vw rgba(0,198,223,0.57);
+    animation: spin 30s infinite linear;
+}
+
